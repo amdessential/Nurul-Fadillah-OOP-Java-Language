@@ -1,0 +1,96 @@
+/*
+ * NUMBER 1
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package week1lab;
+import java.util.Scanner;
+/**
+ *
+ * @author Lenovo
+ */
+public class Week1Lab {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        int input, hasil, sisa;
+        Scanner masuk = new Scanner (System.in);
+        System.out.println("Enter an integer for seconds : ");
+        input =  masuk.nextInt();
+        hasil = input / 60;
+        sisa = input % 60;
+        if (sisa!=0) { 
+            System.out.println(input + " seconds is " + hasil + " minutes and " + sisa + " seconds.");
+        }
+        else {
+            System.out.println(input + " seconds is " + hasil + " minutes.");
+        }
+    }
+    
+}
+
+/*
+ * NUMBER 2
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package week1lab.pkg2;
+import java.util.Scanner;
+/**
+ *
+ * @author Lenovo
+ */
+public class Week1Lab2 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        int input, jarak, mod, hasil;
+        jarak = 1000;
+        mod = jarak % 7;
+        Scanner baca = new Scanner (System.in);
+        System.out.println("List data : ");
+        System.out.println("1 = Minggu");
+        System.out.println("2 = Senin");
+        System.out.println("3 = Selasa");
+        System.out.println("4 = Rabu");
+        System.out.println("5 = Kamis");
+        System.out.println("6 = Jumat");
+        System.out.println("7 = Sabtu");
+        System.out.println("Masukkan kode hari ini : ");
+        input = baca.nextInt();
+        hasil = input + mod;
+        if (hasil <= 7) {
+            switch (hasil) {
+                case 1 -> System.out.println("Hari itu adalah hari Minggu");
+                case 2 -> System.out.println("Hari itu adalah hari Senin");
+                case 3 -> System.out.println("Hari itu adalah hari Selasa");
+                case 4 -> System.out.println("Hari itu adalah hari Rabu");
+                case 5 -> System.out.println("Hari itu adalah hari Kamis");
+                case 6 -> System.out.println("Hari itu adalah hari Jumat");
+                case 7 -> System.out.println("Hari itu adalah hari Sabtu");
+            }
+        }
+        else if (hasil > 7) {
+            hasil = hasil - 7;
+            switch (hasil) {
+                case 1 -> System.out.println("Hari itu adalah hari Minggu");
+                case 2 -> System.out.println("Hari itu adalah hari Senin");
+                case 3 -> System.out.println("Hari itu adalah hari Selasa");
+                case 4 -> System.out.println("Hari itu adalah hari Rabu");
+                case 5 -> System.out.println("Hari itu adalah hari Kamis");
+                case 6 -> System.out.println("Hari itu adalah hari Jumat");
+                case 7 -> System.out.println("Hari itu adalah hari Sabtu");
+            }
+        }
+    }
+    
+}
+
